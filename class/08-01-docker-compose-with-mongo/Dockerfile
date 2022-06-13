@@ -5,6 +5,8 @@ COPY ./package.json /myfolder/
 COPY ./yarn.lock /myfolder/
 RUN yarn install
 
+COPY . /myfolder/
+
 
 
 CMD node index.js
