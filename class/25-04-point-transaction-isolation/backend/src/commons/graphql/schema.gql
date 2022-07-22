@@ -17,11 +17,6 @@ type Board {
   contents: String!
 }
 
-type Payment {
-  id: String!
-  amount: Int!
-}
-
 type PointTransaction {
   id: String!
   impUid: String!
@@ -76,7 +71,6 @@ type ProductTag {
 type Query {
   getHello: String!
   fetchBoards: [Board!]!
-  fetchPayments: [Payment!]!
   fetchProducts: [Product!]!
   fetchProduct(productId: String!): Product!
   fetchUser: String!
@@ -86,7 +80,6 @@ type Mutation {
   login(email: String!, password: String!): String!
   restoreAccessToken: String!
   createBoard(writer: String!, title: String!, contents: String!, createBoardInput: CreateBoardInput!): String!
-  createPayment(amount: Float!): Payment!
   createPointTransaction(impUid: String!, amount: Float!): PointTransaction!
   createProductCategory(name: String!): ProductCategory!
   createProduct(createProductInput: CreateProductInput!): Product!

@@ -4,7 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './apis/auth/auth.module';
 import { BoardModule } from './apis/boards/boards.moduls';
-import { PaymentMoudle } from './apis/payment/payment.module';
+import { FileModule } from './apis/file/file.module';
 import { PointTransactionModule } from './apis/pointTransaction/pointTransaction.module';
 import { ProductModule } from './apis/products/product.moduls';
 import { ProductCategoryModule } from './apis/productsCategory/productCategory.moduls';
@@ -16,7 +16,7 @@ import { UserModule } from './apis/user/user.moduls';
   imports: [
     AuthModule,
     BoardModule,
-    PaymentMoudle,
+    FileModule,
     PointTransactionModule,
     ProductCategoryModule,
     ProductModule,
